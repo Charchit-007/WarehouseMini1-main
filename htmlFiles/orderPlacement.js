@@ -1,8 +1,8 @@
 console.log("Shivam")
 // const token = localStorage.getItem("token");
-const BASE_URL="http://127.0.0.1:8000";
+//const BASE_URL="http://127.0.0.1:8000";
 const orderForm = document.getElementById("orderForm");
-const username =document.getElementById("username");
+//const username =document.getElementById("username");
 if(username){
     username.textContent = localStorage.getItem("username");
 }
@@ -48,7 +48,7 @@ orderForm.addEventListener("submit", async function (event) {
 });
 }
 
-const logout = document.getElementById('logout');
+//const logout = document.getElementById('logout');
 logout.addEventListener('click',function(){
   localStorage.removeItem('token');
   window.location.href="./Login.html"

@@ -1,9 +1,9 @@
 console.log("Shivam")
 // const token = localStorage.getItem("token");
-//const BASE_URL="http://127.0.0.1:8000";
+const BASE_URL="http://127.0.0.1:8000";
 const orderForm = document.getElementById("orderForm");
-//const username =document.getElementById("username");
-/*if(username){
+/*const username =document.getElementById("username");
+if(username){
     username.textContent = localStorage.getItem("username");
 }*/
 if(orderForm){

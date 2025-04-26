@@ -11,10 +11,22 @@ signUp.addEventListener("submit", async (event) => {
       const password1 = document.getElementById("password1").value;
 const password2 = document.getElementById("password2").value;
 
+const usernameRegex = /^[a-zA-Z]{3,20}$/;
+  if (!usernameRegex.test(username)) {
+    alert("Username must be 3-20 characters long and contain only letters (no numbers or symbols).");
+    return;
+  }
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
 if (password1 !== password2) {
   alert("Passwords do not match");
   return;
-}
+  }
     const formData = {
         username : document.getElementById("username").value,
         email : document.getElementById("email").value,
@@ -60,10 +72,6 @@ catch(err){
 });
 }
 
-
-
-
-
 const submitbtn = document.getElementById('submitbtn')
 if(submitbtn){
     
@@ -99,7 +107,7 @@ submitbtn.addEventListener('click',async function(event){
               }
               console.log("Shivam it is working uptil here")
                 window.location.href = "./setwarehouse.html";
-                console.log("Shivam it is not now")
+                console.log("it is not now")
                 }else{
                     alert("Verification Failed")
                 }}
@@ -197,10 +205,6 @@ if(submitloginbtn){
     
                 })}
     
-
-
-
-
                 const orderTable = document.getElementById("orderTable");
         
                 if (orderTable) {

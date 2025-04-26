@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - TOTAL GROUP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../cssfiles/index.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-wrapper">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <div class="logo">TG</div>
+          <div class="company-name">
+            <span class="orange-text">TOTAL</span> GROUP
+          </div>
+          <div class="tagline">Warehouse Management System</div>
+        </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+  <main>
+    <section class="signup-section">
+      <div class="container">
+        <div class="signup-container">
+          <div class="signup-content">
+            <h1><span class="orange-text">Create</span> Account</h1>
+            <p class="subtitle">Join hundreds of businesses optimizing their warehouse operations</p>
+            
+            <form id="signupForm" class="signup-form">
+              <div class="form-group">
+                <label for="username">Full Name</label>
+                <input type="text" id="username" name="username" placeholder="Enter your full name">
+                <span class="error-message" id="fullNameError"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+                <span class="error-message" id="emailError"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" name="password1" placeholder="Create a password">
+                <span class="error-message" id="passwordError"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" name="password2" placeholder="Confirm your password">
+                <span class="error-message" id="confirmPasswordError"></span>
+              </div>
+              
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                <span class="error-message" id="termsError"></span>
+              </div>
+              
+              <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+            
+            <p class="login-link">Already have an account? <a href="login.html">Log In</a></p>
+          </div>
+          <div class="signup-image">
+            <div class="image-container">
+              <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Warehouse operations">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

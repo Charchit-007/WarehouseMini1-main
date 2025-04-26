@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification - TOTAL GROUP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cssfiles/AdminDashboard.css">
+    <style>
+        /* OTP Input Page Styles - Adjust as needed to match the theme */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure full height */
+            background-color: #f9f9f9; /* Match theme */
+            font-family: 'Inter', sans-serif; /* Ensure the font is applied */
+        }
+
+        .otp-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match theme */
+            text-align: center;
+            width: 80%;
+            max-width: 400px; /* Limit the width */
+        }
+
+        .otp-container h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .otp-input {
+            padding: 12px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            width: 100%;
+            box-sizing: border-box; /* Prevent padding from increasing width */
+            text-align: center; /* Center the text input */
+        }
+
+        .otp-submit-button {
+            padding: 14px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: auto; /* Adjust width */
+            text-transform: uppercase; /* Optional: Add uppercase */
+            font-weight: 600; /* Optional: Bold font */
+        }
+
+        .otp-submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Ensure the styles from AdminDashboard.css don't interfere too much */
+        .dashboard-container, .sidebar, .main-content {
+            display: none; /* Hide these elements */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="otp-container">
+        <h2>Enter OTP</h2>
+        <input type="text" class="otp-input" placeholder="Enter OTP" id="otp">
+        <button class="otp-submit-button" id="submitbtn">Submit</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

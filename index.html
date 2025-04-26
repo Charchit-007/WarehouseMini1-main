@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Group - Warehouse Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+ @keyframes fadeIn {
+ from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+    
+    :root {
+      --brand-navy: #0A2342;
+      --brand-orange: #F56416;
+      --brand-lightgray: #F8F8F8;
+      --brand-darkgray: #333333;
+    }
+    
+    .text-brand-navy {
+      color: var(--brand-navy);
+    }
+    
+    .text-brand-orange {
+      color: var(--brand-orange);
+    }
+    
+    .bg-brand-navy {
+      background-color: var(--brand-navy);
+    }
+    
+    .bg-brand-orange {
+      background-color: var(--brand-orange);
+    }
+    
+    .hover\:bg-brand-orange\/90:hover {
+      background-color: rgba(245, 100, 22, 0.9);
+    }
+    
+    .bg-brand-lightgray {
+      background-color: var(--brand-lightgray);
+    }
+    
+    .btn-primary {
+      background-color: var(--brand-orange);
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 0.375rem;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary:hover {
+      background-color: rgba(245, 100, 22, 0.9);
+    }
+    
+    .btn-secondary {
+      background-color: white;
+      color: var(--brand-navy);
+      border: 1px solid var(--brand-navy);
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 0.375rem;
+      transition: all 0.2s;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #f9f9f9;
+    }
+    
+    .feature-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s;
+    }
+    
+    .feature-card:hover {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .feature-icon-container {
+      margin-right: 1rem;
+      padding: 0.75rem;
+      background-color: var(--brand-lightgray);
+      border-radius: 0.5rem;
+      color: var(--brand-orange);
+      transition: all 0.3s;
+    }
+    
+    .feature-card:hover .feature-icon-container {
+      background-color: var(--brand-orange);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <header class="bg-brand-lightgray shadow-sm sticky top-0 z-50">
+        <div class="w-full px-4 md:px-6 py-4">
+          <div class="flex items-center justify-between w-full">
+      
+            <!-- LEFT: Logo + Company Name -->
+            <div class="flex items-center space-x-3">
+              <!-- Logo -->
+              <div class="w-10 h-10 bg-brand-orange flex items-center justify-center rounded-md text-white font-bold">
+                TG
+              </div>
+              <!-- Company Name -->
+              <div class="font-bold text-xl text-brand-navy">
+                <span class="text-brand-orange">TOTAL</span> GROUP
+              </div>
+            </div>
+      
+            <!-- RIGHT: System Name + Nav + Buttons -->
+            <div class="hidden md:flex items-center space-x-6">
+              <!-- System Name -->
+              <div class="text-lg font-medium text-gray-600">
+                Warehouse Management System
+              </div>
+      
+              <!-- Navigation -->
+              <nav class="flex items-center">
+                <ul class="flex space-x-8 mr-6">
+                  <li><a href="#" class="text-gray-600 hover:text-brand-navy transition-colors">Home</a></li>
+                  <li><a href="#features" class="text-gray-600 hover:text-brand-navy transition-colors">Features</a></li>
+                  <li><a href="#benefits" class="text-gray-600 hover:text-brand-navy transition-colors">Benefits</a></li>
+                  <li><a href="#contact-us" class="text-gray-600 hover:text-brand-navy transition-colors">Contact</a></li>
+                </ul>
+      
+                <!-- Buttons -->
+                <div class="flex items-center gap-2">
+                  <button onclick="window.location.href='./htmlFiles/Login.html'" class="flex items-center gap-2 border border-gray-300 bg-brand-navy hover:bg-brand-navy text-white font-medium py-2 px-4 rounded-md transition-colors">
+                    <i data-lucide="log-in" class="w-4 h-4"></i>
+                    <span>Login</span>
+                  </button>
+                 
+                </div>
+              </nav>
+            </div>
+      
+    
+        <div class="md:hidden">
+          <button 
+            id="mobile-menu-button"
+            class="text-gray-600 hover:text-brand-navy"
+          >
+            <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+            <i data-lucide="x" class="w-6 h-6 hidden" id="close-icon"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden pt-4 pb-2 animate-fade-in hidden">
+        <nav>
+          <ul class="flex flex-col space-y-4">
+            <li><a href="#" class="text-gray-600 hover:text-brand-navy transition-colors block py-2">Home</a></li>
+            <li><a href="#features" class="text-gray-600 hover:text-brand-navy transition-colors block py-2">Features</a></li>
+            <li><a href="#benefits" class="text-gray-600 hover:text-brand-navy transition-colors block py-2">Benefits</a></li>
+            <li><a href="#contact" class="text-gray-600 hover:text-brand-navy transition-colors block py-2">Contact</a></li>
+            <li><a href="./htmlFiles/Login.html">
+              <button onclick="location.href='./htmlFiles/Login.html'" class="flex items-center gap-2 w-full justify-center border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors" >
+                <i onclick="location.href='./htmlFiles/Login.html'" data-lucide="log-in" class="w-4 h-4"></i>
+                <span>Login</span>
+              </button></a>
+              
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gray-100 py-20 md:py-32">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-navy leading-tight animate-fade-in">
+            <span class="text-brand-orange">TOTAL GROUP</span>
+          </h1>
+          
+          <h2 class="text-2xl md:text-3xl font-semibold text-brand-navy animate-fade-in" style="animation-delay: 0.2s">
+            Digital Warehouse Management System
+          </h2>
+          
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.4s">
+            Transforming manual warehouse operations into streamlined digital processes.
+            Optimize inventory, track shipments, and improve efficiency with our advanced solution.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row justify-center gap-6 pt-4 animate-fade-in" style="animation-delay: 0.6s">
+            <button onclick="location.href='./htmlFiles/SignUp.html'" class="w-40 bg-brand-navy hover:bg-brand-orange/90 text-white text-lg px-8 py-4 rounded-md">Register</button>
+          </div>
+          
+          <div class="pt-8 animate-fade-in" style="animation-delay: 0.8s">
+            <p class="text-sm text-gray-500">Automating manual processes for better business outcomes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Comprehensive Logistics Solutions</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+            Our warehouse management system offers a complete suite of tools to optimize your logistics operations.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="feature-card" style="animation-delay: 0s">
+            <div class="flex items-start">
+              <div class="feature-icon-container">
+                <i data-lucide="package" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">Inventory Management</h3>
+                <p class="text-gray-600">Real-time tracking and optimized storage allocation for all your inventory needs.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="feature-card" style="animation-delay: 0.1s">
+            <div class="flex items-start">
+              <div class="feature-icon-container">
+                <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">Analytics Dashboard</h3>
+                <p class="text-gray-600">Comprehensive data visualization and reporting to make informed decisions.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="feature-card" style="animation-delay: 0.2s">
+            <div class="flex items-start">
+              <div class="feature-icon-container">
+                <i data-lucide="truck" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">Shipment Tracking</h3>
+                <p class="text-gray-600">End-to-end visibility of all incoming and outgoing shipments.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Feature 4 -->
+          <div class="feature-card" style="animation-delay: 0.3s">
+            <div class="flex items-start">
+              <div class="feature-icon-container">
+                <i data-lucide="users" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">Staff Management</h3>
+                <p class="text-gray-600">Optimize workforce scheduling and track productivity metrics.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Feature 5 -->
+          <div class="feature-card" style="animation-delay: 0.4s">
+            <div class="flex items-start">
+              <div class="feature-icon-container">
+                <i data-lucide="search" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">Order Processing</h3>
+                <p class="text-gray-600">Streamlined picking, packing, and shipping process for faster fulfillment.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Feature 6 -->
+          <div class="feature-card" style="animation-delay: 0.5s">
+            <div class="flex items-start">
+              <div class="feature-icon-container">
+                <i data-lucide="shield" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">Security Protocols</h3>
+                <p class="text-gray-600">Advanced security features to protect your valuable inventory.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-brand-navy text-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <img 
+              src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+              alt="Warehouse operations"
+              class="rounded-lg shadow-xl w-full h-auto"
+            />
+          </div>
+          
+          <div class="md:w-1/2 space-y-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+              Why Choose <span class="text-brand-orange">Total Group</span>
+            </h2>
+            <p class="text-lg text-gray-200 mb-8">
+              Our logistics management solutions deliver measurable results that impact your bottom line and improve customer satisfaction.
+            </p>
+            
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="text-brand-orange mr-3 mt-1 flex-shrink-0 w-5 h-5"></i>
+                <span class="text-lg">Reduce operational costs by up to 30%</span>
+              </li>
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="text-brand-orange mr-3 mt-1 flex-shrink-0 w-5 h-5"></i>
+                <span class="text-lg">Improve inventory accuracy by 99.9%</span>
+              </li>
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="text-brand-orange mr-3 mt-1 flex-shrink-0 w-5 h-5"></i>
+                <span class="text-lg">Decrease order fulfillment time by 50%</span>
+              </li>
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="text-brand-orange mr-3 mt-1 flex-shrink-0 w-5 h-5"></i>
+                <span class="text-lg">Minimize picking errors by 80%</span>
+              </li>
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="text-brand-orange mr-3 mt-1 flex-shrink-0 w-5 h-5"></i>
+                <span class="text-lg">Optimize warehouse space utilization</span>
+              </li>
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="text-brand-orange mr-3 mt-1 flex-shrink-0 w-5 h-5"></i>
+                <span class="text-lg">Real-time visibility across all operations</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 bg-brand-lightgray">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center max-w-5xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+            Ready to Transform Your Warehouse Operations?
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+            Join hundreds of businesses that have optimized their logistics with Total Group's warehouse management solutions.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+         </div>
+          <!-- //insert here demo button -->
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-navy text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            <span class="text-brand-orange">TOTAL</span> GROUP
+          </h3>
+          <p class="text-gray-300 mb-4">
+            Leading provider of innovative warehouse logistics management solutions that help businesses optimize operations and reduce costs.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Home</a></li>
+            <li><a href="#features" class="text-gray-300 hover:text-brand-orange transition-colors">Features</a></li>
+            <li><a href="#benefits" class="text-gray-300 hover:text-brand-orange transition-colors">Benefits</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-brand-orange transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Solutions</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Inventory Management</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Order Processing</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Shipment Tracking</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Warehouse Analytics</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <section id="contact-us" class="mt-10">
+          <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i data-lucide="map-pin" class="text-brand-orange mr-3 mt-1 flex-shrink-0 w-4 h-4"></i>
+              <span class="text-gray-300">Viraj Impex House, 47 P.D'Mello Road, Mumbai 400 009</span>
+            </li>
+            <li class="flex items-center">
+              <i data-lucide="phone" class="text-brand-orange mr-3 flex-shrink-0 w-4 h-4"></i>
+              <span class="text-gray-300">+91 22 40767676</span>
+            </li>
+            <li class="flex items-center">
+              <i data-lucide="mail" class="text-brand-orange mr-3 flex-shrink-0 w-4 h-4"></i>
+              <span class="text-gray-300">info@totalgroup.in</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+      
+      <div class="border-t border-gray-700 pt-8 mt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 Total Group. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-brand-orange transition-colors">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-brand-orange transition-colors">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-brand-orange transition-colors">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Apply staggered animation delays to feature cards
+    document.querySelectorAll('.feature-card').forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+      card.classList.add('animate-fade-in');
+    });
+    
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+    
+  </script>
+</body>
+</html>

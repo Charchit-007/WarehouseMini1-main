@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - TOTAL GROUP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../cssfiles/AdminDashboard.css">
+ <style>
+  #viewLayout{
+    height: 40vh;
+    width:40vh;
+    background-color: #eeecec;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:4px greenyellow;
+    margin-left: 30vh;
+  }
+  #viewButton{
+    background-color: #61ca17;
+    padding:10px;
+    height:60px;
+    font-size: large;
+    width:100px;
+  }
+ </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Left Side Panel -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-section">
+          <div class="logo">TG</div>
+          <h1 class="company-name">
+            <span class="highlight">TOTAL</span> GROUP
+          </h1>
+        </div>
+        <div class="admin-label">Admin</div>
+      </div>
+      
+      <nav class="sidebar-menu">
+        <ul>
+          <li class="menu-item">
+            <div class="menu-title" data-dropdown="dashboard-dropdown">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+              <a href="Dashboard.html" style="text-decoration: none; color:white;">Dashboard</a>
+              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+            </div>
+            <ul class="submenu" id="dashboard-dropdown">
+              <li><a href="orderPage1.html">Orders</a></li>
+            </ul>
+          </li>
+          
+          <li class="menu-item">
+            <div class="menu-title" data-dropdown="shipments-dropdown">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path><path d="M12 3v6"></path></svg>
+              Shipments
+              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+            </div>
+            <ul class="submenu" id="shipments-dropdown">
+              <li><a href="Status.html">Status</a></li>
+              <li><a href="Delivery.html">Delivery</a></li>
+            </ul>
+          </li>
+          
+          <li class="menu-item">
+            <div class="menu-title" data-dropdown="inventory-dropdown">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z"></path><path d="M12 10v4"></path><path d="M12 2v2"></path></svg>
+              Inventory
+              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+            </div>
+            <ul class="submenu" id="inventory-dropdown">
+              <li><a href="tableforInv.html">Edit</a></li>
+              <li><a href="addProduct.html">Add Product</a></li>
+              <li><a href="statusInv.html" class="alert-item">Alert!</a></li>
+            </ul>
+          </li>
+          
+          <li class="menu-item">
+            <div class="menu-title" data-dropdown="warehouse-dropdown">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 22H2"></path><path d="M6 18H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2"></path><path d="M18 12v10"></path><path d="M12 12v10"></path><path d="M6 12v10"></path><path d="M12 4v4"></path></svg>
+              Warehouse
+              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+            </div>
+            <ul class="submenu" id="warehouse-dropdown">
+              <li><a href="Layout.html">Layout</a></li>
+            </ul>
+          </li>
+          
+          <li class="menu-item">
+            <div class="menu-title" data-dropdown="reports-dropdown">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H9"></path></svg>
+              Reports
+              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+            </div>
+            <ul class="submenu" id="reports-dropdown">
+              <li><a href="annualRep.html">Annual</a></li>
+              <li><a href="Bills.html">Bills</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <img src="../person_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="NO image" style="height: 40px; margin-right:10px;">
+          <div class="user-details">
+            <div id="username" class="user-name">Nidhi Singh</div>
+            <div class="user-role">Administrator</div>
+          </div>
+        </div>
+        <button class="logout-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <a href="" id="logout" style="text-decoration: none; color:white; font-weight: 500; height: max-content; ">Logout</a>
+
+        </button>
+      </div>
+    </div>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <button class="toggle-sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <h1>Layout of the warehouse</h1>
+        </div>
+        <div class="header-right">
+          <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            </button>
+          </div>
+          <div class="mail-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <span class="badge">5</span>
+          </div>
+          
+        </div>
+      </header>
+      <main class="dashboard-main">
+
+        <div id="viewLayout">
+            <button id="viewButton">View</button>
+        </div>
+      </main>
+      
+    
+      
+
+
+
+  <script src="Dashboard.js"></script>
+  <script src="outbound.js"></script>
+</body>
+</html>

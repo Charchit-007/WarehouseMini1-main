@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TOTAL GROUP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../cssfiles/login.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="background-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <main class="login-container">
+      <div class="form-panel">
+        <div class="logo-container">
+          <div class="logo">TG</div>
+          <h1 class="company-name">
+            <span class="highlight">TOTAL</span> GROUP
+          </h1>
+        </div>
+        
+        <h2 class="welcome-text">Welcome Back</h2>
+        <p class="subtitle">Login to access your warehouse management dashboard</p>
+        
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <div class="input-container">
+              <input type="username" id="username" placeholder="Enter your Username">
+              <span class="error" id="usernameError"></span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-container">
+              <input type="password" id="password" placeholder="Enter your password">
+              <span class="error" id="passwordError"></span>
+            </div>
+          </div>
+          
+          <div class="options-row">
+            <div class="remember-me">
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember me</label>
+            </div>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+          
+          <button type="submit" class="login-button">
+            <span>Login</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </button>
+          
+          <p class="signup-text">
+            Don't have an account? <a href="SignUp.html">Sign up</a>
+          </p>
+        </form>
+      </div>
+      
+      <div class="info-panel">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="info-card">
+            <h2>Warehouse Logistics Management</h2>
+            <p>Optimize inventory, streamline operations, and boost productivity with our powerful platform.</p>
+            
+            <div class="benefits-container">
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path></svg>
+                </div>
+                <span>Real-time inventory tracking</span>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                </div>
+                <span>Automated order processing</span>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+                </div>
+                <span>Analytics and reporting</span>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line></svg>
+                </div>
+                <span>Mobile accessibility</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

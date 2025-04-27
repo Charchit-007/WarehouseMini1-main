@@ -1,3 +1,4 @@
+const BASE_URL = 'https://backenddjango-main-final.onrender.com';
 document.addEventListener('DOMContentLoaded', function() {
     // Toggle sidebar on mobile
     const toggleSidebarBtn = document.querySelector('.toggle-sidebar');
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
     
-    const BASE_URL = 'https://backenddjango-main-final.onrender.com';
+    
     // Animation for dashboard stats
     const statCards = document.querySelectorAll('.stat-card');
     

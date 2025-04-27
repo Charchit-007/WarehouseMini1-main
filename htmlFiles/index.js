@@ -11,13 +11,16 @@ signUp.addEventListener("submit", async (event) => {
       const password1 = document.getElementById("password1").value;
 const password2 = document.getElementById("password2").value;
 
-const usernameRegex = /^[a-zA-Z]{3,20}$/;
+const username = document.getElementById("username").value;
+const email = document.getElementById("email").value;
+const usernameRegex = /^[a-zA-Z\s]{3,20}$/;
+
   if (!usernameRegex.test(username)) {
     alert("Username must be 3-20 characters long and contain only letters (no numbers or symbols).");
     return;
   }
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   if (!emailRegex.test(email)) {
     alert("Please enter a valid email address.");
     return;

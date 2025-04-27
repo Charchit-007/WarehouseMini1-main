@@ -1,6 +1,6 @@
 const tranDriv = document.getElementById("transporterDriverForm");
-const token = localStorage.getItem("token");
-//const BASE_URL='https://backenddjango-main-final.onrender.com';
+// const token = localStorage.getItem("token");
+const BASE_URL='https://backenddjango-main-final.onrender.com';
 
 if(tranDriv){ 
     tranDriv.addEventListener("submit", async function(event){
@@ -77,7 +77,7 @@ if(receiveForm){
         if(response.ok){
             const result = await response.json()
             console.log(result)
-            if(result.message === "Data fetched Successfully"){
+            if(result.message === "Data fetched Successully"){
                 window.location.href='./orderOut2Page.html';
             }
             else{
@@ -124,7 +124,7 @@ if(invoice){
             if(response.ok){
             const result = await response.json()
             console.log(result)
-            if(result.message === "Data fetched Successfully"){
+            if(result.message === "Data fetched Successully"){
                 window.location.href='./orderOut2Page.html';    
 
             }else{

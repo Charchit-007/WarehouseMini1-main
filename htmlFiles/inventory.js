@@ -1,7 +1,7 @@
 console.log("Shivam it is working");
 
 //Adding product
-const BASE_URL="http://127.0.0.1:8000";
+const BASE_URL='https://backenddjango-main-final.onrender.com';
 const productForm = document.getElementById("productForm");
 // const token = localStorage.getItem("token");
 if(productForm){

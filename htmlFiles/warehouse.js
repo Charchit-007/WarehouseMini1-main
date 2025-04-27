@@ -2,7 +2,7 @@
 console.log("Shivam it is working");
 // const token = localStorage.getItem("token");
 const warehouseForm = document.getElementById("warehouseForm")
-const BASE_URL="http://127.0.0.1:8000";
+const BASE_URL='https://backenddjango-main-final.onrender.com';
 if(warehouseForm){  
     warehouseForm.addEventListener("submit", async function(event){
     event.preventDefault();

@@ -1,9 +1,10 @@
 const ctx = document.getElementById('myBarChart1').getContext('2d');
 let myBarChart;
+const BASE_URL = 'https://backenddjango-main-final.onrender.com';
 
 const fetchData = async () => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/outbound/chart', {
+    const response = await fetch(`${BASE_URL}/outbound/chart`, {
       method: 'GET',
       headers: {
         "Authorization": `Bearer ${token}`,

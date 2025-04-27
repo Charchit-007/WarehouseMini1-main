@@ -1,6 +1,6 @@
-console.log("Shivam")
+console.log("Welcome")
 // const token = localStorage.getItem("token");
-const BASE_URL="http://127.0.0.1:8000";
+const BASE_URL='https://backenddjango-main-final.onrender.com';
 const orderForm = document.getElementById("orderForm");
 /*const username =document.getElementById("username");
 if(username){

@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
     
-    const BASE_URL ='http://127.0.0.1:8000';
+    const BASE_URL = 'https://backenddjango-main-final.onrender.com';
     // Animation for dashboard stats
     const statCards = document.querySelectorAll('.stat-card');
     
@@ -122,7 +122,7 @@ if(stockItem){
 async function totalStocks(){
 
   try{
-    const response = await fetch('http://127.0.0.1:8000/app1/totalStocks',{
+    const response = await fetch(`${BASE_URL}/app1/totalStocks`,{
       method:'GET',
       headers:{
         "Authorization": `Bearer ${token}`,
@@ -155,7 +155,7 @@ if(totalOrders){
 async function totalOrdersFetch(){
 
   try{
-    const response = await fetch('http://127.0.0.1:8000/app1/totalOrders',{
+    const response = await fetch(`${BASE_URL}/app1/totalOrders`,{
       method:'GET',
       headers:{
         "Authorization": `Bearer ${token}`,
@@ -190,7 +190,7 @@ if(totalShipments){
 async function totalShipmentsFetch(){
 
   try{
-    const response = await fetch('http://127.0.0.1:8000/app1/totalShipments',{  
+    const response =  await fetch(`${BASE_URL}/app1/totalShipments`,{  
       method:'GET',
       headers:{
         "Authorization": `Bearer ${token}`,
@@ -232,7 +232,7 @@ let myPieChart;
 
 const fetchDataForPieChart = async () => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/outbound/piechart_view', {
+    const response =  await fetch(`${BASE_URL}/outbound/piechart_view`, {
       method: 'GET',
       headers: {
         "Authorization": `Bearer ${token}`,

@@ -2,10 +2,10 @@ console.log("Welcome")
 const token = localStorage.getItem("token");
 const BASE_URL='https://backenddjango-main-final.onrender.com';
 const orderForm = document.getElementById("orderForm");
-/*const username =document.getElementById("username");
+const username =document.getElementById("username");
 if(username){
     username.textContent = localStorage.getItem("username");
-}*/
+}
 if(orderForm){
 orderForm.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -48,8 +48,8 @@ orderForm.addEventListener("submit", async function (event) {
 });
 }
 
-/*const logout = document.getElementById('logout');
+const logout = document.getElementById('logout');
 logout.addEventListener('click',function(){
   localStorage.removeItem('token');
   window.location.href="./Login.html"
-})*/
+})

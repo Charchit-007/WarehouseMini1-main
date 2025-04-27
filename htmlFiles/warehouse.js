@@ -2,7 +2,7 @@
 console.log("Shivam it is working");
 // const token = localStorage.getItem("token");
 const warehouseForm = document.getElementById("warehouseForm")
-const BASE_URL='https://backenddjango-main-final.onrender.com';
+//const BASE_URL='https://backenddjango-main-final.onrender.com';
 if(warehouseForm){  
     warehouseForm.addEventListener("submit", async function(event){
     event.preventDefault();

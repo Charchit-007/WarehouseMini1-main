@@ -1,5 +1,5 @@
 const table = document.getElementById("table");
-const BASE_URL = 'https://backenddjango-main-final.onrender.com';
+//const BASE_URL = 'https://backenddjango-main-final.onrender.com';
 
 if(table){
 

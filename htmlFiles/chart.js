@@ -1,6 +1,6 @@
 const ctx = document.getElementById('myBarChart1').getContext('2d');
 let myBarChart;
-const BASE_URL = 'https://backenddjango-main-final.onrender.com';
+//const BASE_URL = 'https://backenddjango-main-final.onrender.com';
 
 const fetchData = async () => {
   try {

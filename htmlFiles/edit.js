@@ -1,7 +1,7 @@
 
 console.log("Shivam")
 const productId = localStorage.getItem("productId");
-const BASE_URL= 'https://backenddjango-main-final.onrender.com';
+//const BASE_URL= 'https://backenddjango-main-final.onrender.com';
 
 // const token = localStorage.getItem("token");
 if (productId) {

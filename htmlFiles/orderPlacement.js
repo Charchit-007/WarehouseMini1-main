@@ -1,5 +1,5 @@
 console.log("Welcome")
-// const token = localStorage.getItem("token");
+const token = localStorage.getItem("token");
 const BASE_URL='https://backenddjango-main-final.onrender.com';
 const orderForm = document.getElementById("orderForm");
 /*const username =document.getElementById("username");

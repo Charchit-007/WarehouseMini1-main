@@ -136,7 +136,7 @@ if(loginform){
             password: document.getElementById("password").value,
         };
 
-        const response = await fetch(`${BASE_URL}/login1`, {
+        const response = await fetch(`${BASE_URL}/login1/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -180,7 +180,7 @@ if(submitloginbtn){
       }
                     const username = localStorage.getItem("username")
                     console.log(username)
-                    const response = await fetch('https://backenddjango-main-final.onrender.com/verify_login_otp',{
+                    const response = await fetch(`${BASE_URL}/verify_login_otp/`,{
                             method:"POST",
                             headers:{
                             "Content-Type": "application/json",

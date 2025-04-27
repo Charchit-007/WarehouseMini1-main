@@ -1,5 +1,5 @@
 const signUp = document.getElementById("signupForm");
-const BASE_URL ='http://127.0.0.1:8000';
+const BASE_URL ='https://backenddjango-main-final.onrender.com';
   
 // const token = localStorage.getItem("token");
 console.log("Index.js")
@@ -180,7 +180,7 @@ if(submitloginbtn){
       }
                     const username = localStorage.getItem("username")
                     console.log(username)
-                    const response = await fetch('http://127.0.0.1:8000/verify_login_otp',{
+                    const response = await fetch('https://backenddjango-main-final.onrender.com/verify_login_otp',{
                             method:"POST",
                             headers:{
                             "Content-Type": "application/json",
@@ -213,7 +213,7 @@ if(submitloginbtn){
                 if (orderTable) {
                   const getOrdersDetails = async () => {
                     try {
-                      const response = await fetch("http://127.0.0.1:8000/outbound/getOrderDetails", {
+                      const response = await fetch("https://backenddjango-main-final.onrender.com/outbound/getOrderDetails", {
                         method: "GET",
                         headers: {
                           "Authorization": `Bearer ${token}`,

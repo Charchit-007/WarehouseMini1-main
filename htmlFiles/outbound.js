@@ -1,5 +1,5 @@
 const tranDriv = document.getElementById("transporterDriverForm");
-// const token = localStorage.getItem("token");
+const token = localStorage.getItem("token");
 //const BASE_URL='https://backenddjango-main-final.onrender.com';
 
 if(tranDriv){ 

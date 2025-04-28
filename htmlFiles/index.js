@@ -1,5 +1,5 @@
 const signUp = document.getElementById("signupForm");
-//const BASE_URL ='https://backenddjango-main-final.onrender.com';
+const BASE_URL ='https://backenddjango-main-final.onrender.com';
   
 // const token = localStorage.getItem("token");
 console.log("Index.js")

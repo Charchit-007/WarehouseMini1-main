@@ -1,9 +1,9 @@
-const token = localStorage.getItem("token");
+/*const token = localStorage.getItem("token");
 if (token) {
     console.log("✅ Token exists:", token);
 } else {
     console.log("❌ Token does not exist in localStorage.");
-}
+}*/
 
 const tranDriv = document.getElementById("transporterDriverForm");
 // const token = localStorage.getItem("token");

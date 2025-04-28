@@ -136,7 +136,7 @@ if(loginform){
             password: document.getElementById("password").value,
         };
 
-        const response = await fetch(`${BASE_URL}/login1/`, {
+        const response = await fetch(`${BASE_URL}/login1`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

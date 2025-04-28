@@ -1,3 +1,10 @@
+const token = localStorage.getItem("token");
+if (token) {
+    console.log("✅ Token exists:", token);
+} else {
+    console.log("❌ Token does not exist in localStorage.");
+}
+
 const tranDriv = document.getElementById("transporterDriverForm");
 // const token = localStorage.getItem("token");
 //const BASE_URL='https://backenddjango-main-final.onrender.com';
@@ -112,7 +119,7 @@ if(invoice){
                 Bill_validity:document.getElementById("Bill_validity").value
             }
 
-            const response = await fetch(`${BASE_URL}/invoice/getBillDetails`,{
+            const response = await fetch('https://backenddjango-main-final.onrender.com/invoice/getBillDetails',{
                 method:"POST",
                 headers:{
                     "Authorization": `Bearer ${token}`,
@@ -181,5 +188,4 @@ if (viewLayout) {
         }
     }
 }
-
 

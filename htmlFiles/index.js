@@ -1,7 +1,5 @@
 const signUp = document.getElementById("signupForm");
-//const BASE_URL ='https://backenddjango-main-final.onrender.com';
-  
-// const token = localStorage.getItem("token");
+
 console.log("Index.js")
 if(signUp){
 signUp.addEventListener("submit", async (event) => {
@@ -39,7 +37,7 @@ if (password1 !== password2) {
 
     
    console.log(formData)
-    const response = await fetch(`${BASE_URL}/SignUpview`,{
+    const response = await fetch(`${window.BASE_URL}/SignUpview`,{
         method:"POST",
         headers:{
 
@@ -88,7 +86,7 @@ submitbtn.addEventListener('click',async function(event){
   }
                 const email = localStorage.getItem("email")
                 console.log(email)
-                const response = await fetch(`${BASE_URL}/verify_otp`,{
+                const response = await fetch(`${window.BASE_URL}/verify_otp`,{
                         method:"POST",
                         headers:{
                         "Content-Type": "application/json",
@@ -136,7 +134,7 @@ if(loginform){
             password: document.getElementById("password").value,
         };
 
-        const response = await fetch(`${BASE_URL}/login1`, {
+        const response = await fetch(`${window.BASE_URL}/login1`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -180,7 +178,7 @@ if(submitloginbtn){
       }
                     const username = localStorage.getItem("username")
                     console.log(username)
-                    const response = await fetch(`${BASE_URL}/verify_login_otp`,{
+                    const response = await fetch(`${window.BASE_URL}/verify_login_otp`,{
                             method:"POST",
                             headers:{
                             "Content-Type": "application/json",
@@ -213,7 +211,7 @@ if(submitloginbtn){
                 if (orderTable) {
                   const getOrdersDetails = async () => {
                     try {
-                      const response = await fetch(`${BASE_URL}/outbound/getOrderDetails`, {
+                      const response = await fetch(`${window.BASE_URL}/outbound/getOrderDetails`, {
                         method: "GET",
                         headers: {
                           "Authorization": `Bearer ${token}`,

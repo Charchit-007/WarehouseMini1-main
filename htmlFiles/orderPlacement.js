@@ -22,7 +22,7 @@ orderForm.addEventListener("submit", async function (event) {
 
     }
 
-    const response = await fetch(`${BASE_URL}/inbound/orderForm`,{
+    const response = await fetch(`${window.BASE_URL}/inbound/orderForm`,{
         method:"POST",
         headers:{
             "Authorization": `Bearer ${token}`,

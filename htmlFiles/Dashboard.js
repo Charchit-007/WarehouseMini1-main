@@ -123,7 +123,7 @@ if(stockItem){
 async function totalStocks(){
 
   try{
-    const response = await fetch(`${BASE_URL}/app1/totalStocks`,{
+    const response = await fetch(`${window.BASE_URL}/app1/totalStocks`,{
       method:'GET',
       headers:{
         "Authorization": `Bearer ${token}`,
@@ -156,7 +156,7 @@ if(totalOrders){
 async function totalOrdersFetch(){
 
   try{
-    const response = await fetch(`${BASE_URL}/app1/totalOrders`,{
+    const response = await fetch(`${window.BASE_URL}/app1/totalOrders`,{
       method:'GET',
       headers:{
         "Authorization": `Bearer ${token}`,
@@ -191,7 +191,7 @@ if(totalShipments){
 async function totalShipmentsFetch(){
 
   try{
-    const response =  await fetch(`${BASE_URL}/app1/totalShipments`,{  
+    const response =  await fetch(`${window.BASE_URL}/app1/totalShipments`,{  
       method:'GET',
       headers:{
         "Authorization": `Bearer ${token}`,
@@ -233,7 +233,7 @@ let myPieChart;
 
 const fetchDataForPieChart = async () => {
   try {
-    const response =  await fetch(`${BASE_URL}/outbound/piechart_view`, {
+    const response =  await fetch(`${window.BASE_URL}/outbound/piechart_view`, {
       method: 'GET',
       headers: {
         "Authorization": `Bearer ${token}`,

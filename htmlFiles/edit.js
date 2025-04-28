@@ -16,7 +16,7 @@ if (productId) {
 
 
 function fetchProductDetails(productId) {
-  fetch(`${BASE_URL}/app1/get_productDetails?product_id=${productId}`, {
+  fetch(`${window.BASE_URL}/app1/get_productDetails?product_id=${productId}`, {
     method: "GET",
     headers: {
       "Authorization": `Bearer ${token}`,
@@ -72,7 +72,7 @@ editform.addEventListener("submit", async function (event) {
 
      }
   try {
-    const response = await fetch(`${BASE_URL}/app1/edit_product?product_id=${productId}`, {
+    const response = await fetch(`${window.BASE_URL}/app1/edit_product?product_id=${productId}`, {
       method: "PUT",
       headers: {
         "Authorization": `Bearer ${token}`,

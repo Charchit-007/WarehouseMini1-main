@@ -25,7 +25,7 @@ if(tranDriv){
             DriverEmail: document.getElementById("Driver_Email").value,
     }
 
-    const response = await fetch(`${BASE_URL}/transport/saveDetails`,{
+    const response = await fetch(`${window.BASE_URL}/transport/saveDetails`,{
         method:"POST",
         headers:{
             "Authorization": `Bearer ${token}`,
@@ -72,7 +72,7 @@ if(receiveForm){
             ReceiverCompany_GSTIN:document.getElementById("Receiver_GSTIN").value,
             ModeOfTransport:document.getElementById("ModeOfTransport").value,
         }
-        const response = await fetch(`${BASE_URL}/outbound/saveDetails`,{
+        const response = await fetch(`${window.BASE_URL}/outbound/saveDetails`,{
             method:"POST",
             headers:{
                 "Authorization": `Bearer ${token}`,
@@ -153,7 +153,7 @@ const viewLayout = document.getElementById("viewLayout");
 if (viewLayout) {
     try {
         (async () => {
-            const response = await fetch(`${BASE_URL}/registration/getDetails`, {
+            const response = await fetch(`${window.BASE_URL}/registration/getDetails`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${token}`,

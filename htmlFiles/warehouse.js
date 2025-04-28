@@ -26,7 +26,7 @@ if(warehouseForm){
           }
           
        
-            const response = await fetch(`${BASE_URL}/registration/warehouse`, {
+            const response = await fetch(`${window.BASE_URL}/registration/warehouse`, {
                 method: 'POST',
                 headers: {
                     "Authorization": `Bearer ${token}`,

@@ -28,7 +28,7 @@ productForm.addEventListener("submit", async function (event) {
     return;
   }
 
-  const response = await fetch(`${BASE_URL}/app1/add_item`, {
+  const response = await fetch(`${window.BASE_URL}/app1/add_item`, {
     method: "POST",
     headers: {
       "Authorization": `Bearer ${token}`,
@@ -45,7 +45,7 @@ productForm.addEventListener("submit", async function (event) {
 
 
 const getProductDetails = async function () {
-  const response = await fetch(`${BASE_URL}/app1/get_product`, {
+  const response = await fetch(`${window.BASE_URL}/app1/get_product`, {
     method: "GET",
     headers: {
       "Authorization": `Bearer ${token}`,
@@ -102,7 +102,7 @@ function redirectToEditPage(productId) {
 
 //Deleting the product
 const deleteProduct = async function (productId) {
-  const response = await fetch(`${BASE_URL}/app1/del_product`, {
+  const response = await fetch(`${window.BASE_URL}/app1/del_product`, {
     method: "DELETE",
     headers: {
       "Authorization": `Bearer ${token}`,

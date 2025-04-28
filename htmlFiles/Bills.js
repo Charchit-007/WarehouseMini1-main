@@ -1,5 +1,4 @@
 const table = document.getElementById("table");
-//const BASE_URL = 'https://backenddjango-main-final.onrender.com';
 
 if(table){
 
@@ -7,7 +6,7 @@ if(table){
         
         (async()=>{
     const tableBody = document.getElementById("tablebody");
-    const response =  await fetch(`${BASE_URL}/invoice/getDetails`,{
+    const response =  await fetch(`${window.BASE_URL}/invoice/getDetails`,{
         method:"GET",
         headers:{
             "Authorization": `Bearer ${token}`,

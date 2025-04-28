@@ -213,7 +213,7 @@ if(submitloginbtn){
                 if (orderTable) {
                   const getOrdersDetails = async () => {
                     try {
-                      const response = await fetch("https://backenddjango-main-final.onrender.com/outbound/getOrderDetails", {
+                      const response = await fetch(`${BASE_URL}/outbound/getOrderDetails`, {
                         method: "GET",
                         headers: {
                           "Authorization": `Bearer ${token}`,

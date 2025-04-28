@@ -180,7 +180,7 @@ if(submitloginbtn){
       }
                     const username = localStorage.getItem("username")
                     console.log(username)
-                    const response = await fetch(`${BASE_URL}/verify_login_otp/`,{
+                    const response = await fetch(`${BASE_URL}/verify_login_otp`,{
                             method:"POST",
                             headers:{
                             "Content-Type": "application/json",

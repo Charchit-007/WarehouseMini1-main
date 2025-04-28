@@ -112,7 +112,7 @@ if(invoice){
                 Bill_validity:document.getElementById("Bill_validity").value
             }
 
-            const response = await fetch(`${BASE_URL}/invoice/getBillDetails/`,{
+            const response = await fetch(`${BASE_URL}/invoice/getBillDetails`,{
                 method:"POST",
                 headers:{
                     "Authorization": `Bearer ${token}`,
